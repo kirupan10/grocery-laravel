@@ -42,3 +42,5 @@ Route::get('/cart', function () {
     return view('cart');
 });
 
+Route::view('/sample', 'sample');
+
