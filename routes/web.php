@@ -1,7 +1,10 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CrudController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -48,3 +51,6 @@ Route::view('/sample', 'sample');
 
 Route::get('/login', [LoginController::class, 'LoginForm']);
 Route::post('loginAccess', [LoginController::class, 'loginAccess']);
+
+Route::get('/create', [LoginController::class, 'create']);
+Route::post('store', [LoginController::class, 'store']);
