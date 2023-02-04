@@ -19,24 +19,31 @@ class RouteServiceProvider extends ServiceProvider
      */
     public const HOME = '/home';
 
-    /**
-     * Define your route model bindings, pattern filters, and other route configuration.
+     /**
+     * This namespace is applied to your controller routes.
      *
-     * @return void
+     * In addition, it is set as the URL generator's root namespace.
+     *
+     * @var string
      */
-    public function boot()
-    {
-        $this->configureRateLimiting();
+    protected $namespace = 'App\Http\Controllers'; // need to add in Laravel 8
 
-        $this->routes(function () {
-            Route::middleware('api')
-                ->prefix('api')
-                ->group(base_path('routes/api.php'));
 
-            Route::middleware('web')
-                ->group(base_path('routes/web.php'));
-        });
-    }
+public function boot()
+{
+    $this->configureRateLimiting();
+
+    $this->routes(function () {
+        Route::prefix('api')
+            ->middleware('api')
+            ->namespace($this->namespace) // need to add in Laravel 8
+            ->group(base_path('routes/api.php'));
+
+        Route::middleware('web')
+            ->namespace($this->namespace) // need to add in Laravel 8
+            ->group(base_path('routes/web.php'));
+    });
+}
 
     /**
      * Configure the rate limiters for the application.

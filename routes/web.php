@@ -54,3 +54,6 @@ Route::post('loginAccess', [LoginController::class, 'loginAccess']);
 
 Route::get('/create', [LoginController::class, 'create']);
 Route::post('store', [LoginController::class, 'store']);
+
+Route::get('/create_user', [UserController::class, 'create']);
+//Route::post('store', [UserController::class, 'store']);
