@@ -40,15 +40,31 @@ Route::get('/register', function () {
 
 
 Route::get('/shop', function () {
-    return view('shop');
+    return view('shop',['title' => '| shop']);
+});
+
+Route::get('/blogs', function () {
+    return view('blogs',['title' => '| blogs']);
 });
 
 Route::get('/contact', function () {
-    return view('contact');
+    return view('contact',['title'=>'| contact']);
+});
+
+Route::get('/profile', function () {
+    return view('auth.profile',['title'=>'| profile']);
 });
 
 Route::get('/cart', function () {
-    return view('cart');
+    return view('cart',['title'=>'| cart']);
+});
+
+Route::get('/wishlist', function () {
+    return view('wishlist',['title'=>'| Wishlist']);
+});
+
+Route::get('/layout', function () {
+    return view('includes.layout',['title'=>'| profile']);
 });
 /*
 Route::view('/sample', 'sample');

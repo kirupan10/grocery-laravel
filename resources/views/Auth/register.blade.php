@@ -13,13 +13,20 @@
     <link rel="stylesheet" href="form/css/style.css">
 
 </head>
+@include('includes.head', ['title' => 'Register'])
+@include('includes.Topbar')
+@include('includes.header')
 
 <body>
     <section class="ftco-section">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center mb-5">
-                    <h2 class="heading-section">Signup | E-Grocery</h2>
+                    @if ($errors->any())
+                        <ul>
+                            {!! implode('', $errors->all('<li class="list-group-item bg-danger">:message</li>')) !!}
+                        </ul>
+                    @endif
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -33,14 +40,6 @@
                                     <h3 class="mb-4">Sign Up</h3>
                                 </div>
                                 <div class="w-100">
-                                    <p class="social-media d-flex justify-content-end">
-                                        <a href="#"
-                                            class="social-icon d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-facebook"></span></a>
-                                        <a href="#"
-                                            class="social-icon d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-twitter"></span></a>
-                                    </p>
                                 </div>
                             </div>
                             <form action="/store" method="POST" class="signin-form">
@@ -96,4 +95,4 @@
 
 </body>
 
-</html>
+@include('includes.footer')
