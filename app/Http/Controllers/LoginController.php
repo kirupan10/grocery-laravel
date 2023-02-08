@@ -19,9 +19,17 @@ class LoginController extends Controller
         $pwd = $request->input('pwd');
         $data = array('username' => $username, "pwd" => $pwd);
 
-        DB::table('login')->insert($data);
+        //DB::table('login')->insert($data);
+        $user = DB::table('login')->where('username', 'pwd')->first();
 
-        return 'new record added. <a href = "/login" > go to login page</a>';
+        if ($user) {
+            $value ='new record added. <a href = "/login" > go to login page</a>';
+
+        }else{
+            $value ='error. <a href = "/login" > go to login page</a>';
+        }
+
+        return $value;
     }
     public function create(){
         return view('create_user');

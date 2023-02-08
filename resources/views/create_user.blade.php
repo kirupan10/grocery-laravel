@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-
 <body>
     <h1>Create form</h1>
     <form action="store" method="post">
@@ -18,5 +17,4 @@
         @csrf
     </form>
 </body>
-
 </html>
