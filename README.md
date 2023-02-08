@@ -1,9 +1,13 @@
 # grocery-online-shopping-Laravel
 
-I'm developing a Laraved-based-online-shopping-application. 
+<img width="1440" alt="Screenshot 2023-02-08 at 22 25 05" src="https://user-images.githubusercontent.com/114853337/217598529-057e4424-31a1-477a-b618-0e360baf8404.png">
+
 
 project description
-[[pending]]
+
+The Online Shopping web application using Laravel is an e-commerce system built with the open-source PHP framework. It allows customers to shop for items online, including apparel, furniture, electronics, and more. The application offers a secure shopping experience with a variety of payment options and intuitive navigation. It also provides a reliable platform for merchants to manage their inventory, accept orders, and track sales. With its powerful features, this online shopping web application is designed to make online shopping easy, fast, and secure.
+
+
 
 How to run this laravel project on your machine 
 
@@ -16,6 +20,5 @@ How to run this laravel project on your machine
 7. Go to http://127.0.0.1:8000/ or go to the link which shown in terminal
 8. Now Project is working
 
-Any help feel free ask
-mail - ikirupan@gmail.com
+Any help feel free to ask via ikirupan@gmail.com
  
