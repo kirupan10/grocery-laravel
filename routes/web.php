@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\CategoryController;
 
 /*
 use App\Http\Controllers\LoginController;
@@ -85,3 +86,12 @@ Route::view('home','home')->middleware('auth');
 Route::view('login','auth.login')->middleware('guest')->name('login');
 Route::post('authenticate',[LoginController::class,'authenticate']);
 Route::get('logout',[LoginController::class,'logout']);
+
+Route::get('/dress',[CategoryController::class,'dress'])->name('profile');
+Route::get('/mobile',[CategoryController::class,'phones']);
+Route::get('/jewels',[CategoryController::class,'jewels']);
+Route::get('/shoes',[CategoryController::class,'shoes']);
+Route::get('/jackets',[CategoryController::class,'jackets']);
+Route::get('/accerssories',[CategoryController::class,'accerssories']);
+Route::get('/bags',[CategoryController::class,'bags']);
+
