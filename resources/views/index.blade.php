@@ -33,6 +33,3 @@
 
 <!-- Include file from include/footer.blade.php file -->
 @include('includes.footer')
-
-<!-- Back to Top -->
-<a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
