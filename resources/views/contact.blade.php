@@ -11,3 +11,5 @@
 @include('includes.contact')
 <!-- Include file from include/footer.blade.php file -->
 @include('includes.footer')
+
+@include('includes.footer')
