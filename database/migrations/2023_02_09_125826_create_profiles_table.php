@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
-            $table->string('profile_name');
-            $table->string('phone_number');
-            $table->string('address');
-            $table->string('address_2');
-            $table->string('zip_code');
+            $table->string('profile_name',30);
+            $table->string('phone_number',15);
+            $table->string('address',50);
+            $table->string('address_2',50);
+            $table->string('zip_code',10);
             $table->timestamps();
         });
     }

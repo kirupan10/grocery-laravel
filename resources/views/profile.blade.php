@@ -8,3 +8,4 @@
 @include('includes.page', ['name' => 'Profile'])
 <!-- Shop Start -->
 @include('includes.footer')
+
